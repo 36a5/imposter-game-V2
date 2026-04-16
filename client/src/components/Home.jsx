@@ -26,8 +26,9 @@ export default function Home() {
       const { lobbyCode } = await res.json();
       setPlayerName(name.trim());
       getSocket().emit("join_lobby", { lobbyCode, playerName: name.trim() });
-    } catch {
-      setError("Could not connect to server.");
+    } catch (err) {
+      // 2. Access the error message here
+      setError(err.message || "Could not connect to server.");
       setLoading(false);
     }
   };

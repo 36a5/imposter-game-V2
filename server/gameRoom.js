@@ -371,6 +371,10 @@ class GameRoom {
     // Broadcast to everyone
     this.emit("stroke_update", strokeData);
   }
+  
+  handleStrokeEnd(socketId) {
+    // No-op for now; turn timer handles advancement
+  }
 
   // ─── Social ───────────────────────────────────────────────────────
 
