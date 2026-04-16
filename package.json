@@ -1,0 +1,14 @@
+{
+  "name": "imposter-game",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "cd server && node index.js",
+    "client": "cd client && npx vite",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
