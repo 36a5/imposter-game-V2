@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*", // restrict in production
+    origin: "https://d7oom-imposter.vercel.app", // your Vercel URL
     methods: ["GET", "POST"],
   },
 });
